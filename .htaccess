@@ -1,0 +1,8 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^vapordubs.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.vapordubs.com$
+
+#RewriteRule ^phpBB3/(.*)$ http://forestcityvw.com/$1 [R=301,L]
+#RewriteRule ^forum/(.*)$ http://forestcityvw.com/$1 [R=301,L]
+#RewriteRule ^forums/(.*)$ http://forestcityvw.com/$1 [R=301,L]

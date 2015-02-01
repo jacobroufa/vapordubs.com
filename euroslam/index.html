@@ -3,9 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Euro Slam Auto Show 2015</title>
-		<meta name="description" content="Volkswagen Audi Partnership of Rockford present Euro Slam 2015 -- A Midwest Car Show">
+		<title>EuroSlam 2015 Car Show &mdash; presented by VAPORDubs</title>
+		<meta name="description" content="Volkswagen Audi Partnership of Rockford present EuroSlam 2015">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700' rel='stylesheet' type='text/css'>
 
 		<style>
 
@@ -17,27 +19,121 @@
 				background: #E5E9EF;
 			}
 
-			body, div, html, h1 {
+			a, body, div, html, img, li, ul {
 				margin: 0;
 				padding: 0;
 			}
 
+			a {
+				color: #2c2c2c;
+				font-size: 22px;
+				text-decoration: none;
+			}
+
+			a:hover, a:active {
+				text-decoration: underline;
+			}
+
 			h1 {
 				color: #2c2c2c;
+				font-family: 'Istok Web', sans-serif';
+				font-size: 60px;
+				margin: 0;
+				text-shadow: -4px -4px 1px #fff, -4px 4px 1px #fff, 4px -4px 1px #fff, 4px 4px 1px #fff;
+				text-transform: uppercase;
+			}
+
+			h1 .slam {
+				color: #E5E9EF;
+			}
+
+			img {
+				height: 100%;
+			}
+
+			.facebook a,
+			.twitter a,
+			.instagram a {
+				background-size: cover;
+				background-repeat: no-repeat;
+				display: inline-block;
+				height: 32px;
+				text-indent: -9999px;
+				width: 32px;
+			}
+
+			.facebook a {
+				background-image: url(/img/facebook.png);
+			}
+
+			.twitter a {
+				background-image: url(/img/twitter.png);
+			}
+
+			.instagram a {
+				background-image: url(/img/instagram.png);
 			}
 
 			.main {
 				position: relative;
 				text-align: center;
-				top: 50%;
-				transform: translateY(-50%);
+			}
+
+			@media (min-width: 720px) {
+				h1 {
+					font-size: 120px;
+				}
+
+				li {
+					display: inline-block;
+				}
 			}
 
 		</style>
 	</head>
 	<body>
-		<div class="main">
-			<h1>Coming Soon</h1>
-		</div>
+		<header>
+
+			<span class="preheader"><a href="http://vapordubs.com">VaporDubs</a>, <a href="http://forestcityvw.com">Forest City Volkswagen</a> and the <a href="http://www.sportscarclubofrockford.com/">Sports Car Club of Rockford</a> Presents</span>
+
+			<h1>Euro <span class="slam">Slam</span></h1>
+
+			<h2>RKFD's first European car show & shine</h2>
+
+		</header>
+
+		<main role="main">
+
+			<p>Saturday May 30, 2015</p>
+
+			<p>Aviators Stadium<br>4503 Interstate Blvd. Loves Park, IL</p>
+
+			<p>Featuring SCCR Autocross, Paintless Dent Removal & Door Prizes</p>
+
+			<p>Gates open at 9 A.M. | Show ends at 4 P.M.</p>
+
+			<p>Show: $20 | Autocross $40</p>
+
+			<p>After Party @ Olympic Tavern at 5 P.M.</p>
+
+		</main>
+
+		<footer>
+
+			<p>Space is limited for autocross and paintless dent removal. Please email us at euroslam@vapordubs.com to reserve a spot. Food, drinks and restrooms will be available on site.</p>
+
+			<p>Share with us: #EUROSLAMSHOW on <span class="facebook"><a href="https://www.facebook.com/pages/vapordubscom/75148374150">Facebook</a></span> <span class="twitter"><a href="https://twitter.com/search?f=realtime&q=%23euroslamshow&src=typd">Twitter</a></span> <span class="instagram"><a href="http://www.gramfeed.com/instagram/tags#euroslamshow">Instagram</a></span></p>
+
+		</footer>
+
+		<script src="/js/jquery-2.1.3.min.js"></script>
+		<script src="/js/jquery.cycle2.min.js"></script>
+
+		<script>
+			var color = 'rgb(' + rand() + ', ' + rand() + ', ' + rand() + ')';
+			var h1 = document.querySelector( 'h1' );
+
+			h1.style.color = color;
+		</script>
 	</body>
 </html>

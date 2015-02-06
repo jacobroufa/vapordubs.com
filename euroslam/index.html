@@ -17,7 +17,21 @@
 
 			body {
 				background: #E5E9EF;
+				position: relative;
 				text-align: center;
+			}
+
+			header, main {
+				margin: 0 auto;
+				max-width: 900px;
+			}
+
+			header {
+				padding-top: 50px;
+			}
+
+			main {
+				position: relative;
 			}
 
 			a, body, div, html, img, li, ul {
@@ -52,6 +66,28 @@
 				height: 100%;
 			}
 
+			.background {
+				background-image: url(/img/euroslam_bkgd.jpg);
+				background-position: top center;
+				background-repeat: no-repeat;
+				height: 100%;
+				position: absolute;
+				width: 100%;
+				z-index: -1;
+			}
+
+			.smalltext {
+				font-size: 90%;
+			}
+
+			.registration {
+				left: 50%;
+				position: relative;
+				text-align: left;
+				transform: translateX(-50%);
+				width: 220px;
+			}
+
 			.facebook a,
 			.twitter a,
 			.instagram a {
@@ -75,22 +111,6 @@
 				background-image: url(/img/instagram.png);
 			}
 
-			header {
-				padding-top: 50px;
-			}
-
-			main {
-				position: relative;
-			}
-
-			.registration {
-				left: 50%;
-				position: relative;
-				text-align: left;
-				transform: translateX(-50%);
-				width: 220px;
-			}
-
 			@media (min-width: 720px) {
 				h1 {
 					font-size: 120px;
@@ -104,9 +124,11 @@
 		</style>
 	</head>
 	<body>
+		<div class="background"></div>
+
 		<header>
 
-			<span class="preheader"><a href="http://vapordubs.com">VaporDubs</a>, <a href="http://forestcityvw.com">Forest City Volkswagen</a> and the <a href="http://www.sportscarclubofrockford.com/">Sports Car Club of Rockford</a> Presents</span>
+			<span class="preheader"><a href="http://vapordubs.com">VaporDubs</a>, <a href="http://forestcityvw.com">Forest City Volkswagen</a> and the <a href="http://www.sportscarclubofrockford.com/">Sports Car Club of Rockford</a> Present</span>
 
 			<h1><span class="euro">Euro</span>Slam</h1>
 
@@ -126,7 +148,7 @@
 
 			<p>After Party @ Olympic Tavern at 5 P.M.</p>
 
-			<p>Space is limited for autocross and paintless dent removal. Please email us at euroslam@vapordubs.com to reserve a spot. Food, drinks and restrooms will be available on site.</p>
+			<p class="smalltext">Space is limited for autocross and paintless dent removal. Please email us at euroslam@vapordubs.com to reserve a spot. Food, drinks and restrooms will be available on site.</p>
 
 			<br><hr><br>
 			<div class="registration">

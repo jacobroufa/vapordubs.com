@@ -41,6 +41,9 @@
 
 			a {
 				color: #2c2c2c;
+			}
+
+			.preheader a {
 				font-size: 22px;
 				text-decoration: none;
 			}
@@ -77,9 +80,10 @@
 			}
 
       #thankyou {
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.6);
 				color: #ffd700;
         display: none;
+				font-size: 20px;
         height: 30px;
         left: 0;
         padding: 30px 0;
@@ -92,12 +96,12 @@
 				font-size: 90%;
 			}
 
-			.registration {
-				left: 50%;
-				position: relative;
+			.registration, .accommodation {
+				display: inline-block;
+				margin: 20px;
+				max-width: 50%;
 				text-align: left;
-				transform: translateX(-50%);
-				width: 220px;
+				vertical-align: top;
 			}
 
 			.facebook a,
@@ -164,6 +168,7 @@
 			<p class="smalltext">Space is limited for autocross and paintless dent removal. Please email us at euroslam@vapordubs.com to reserve a spot. Food, drinks and restrooms will be available on site.</p>
 
 			<br><hr><br>
+
 			<div class="registration">
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 					<input type="hidden" name="cmd" value="_s-xclick">
@@ -181,6 +186,10 @@
 					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 				</form>
 			</div>
+
+			<div class="accommodation">
+				Hotel accommodations available at Holiday Inn Express, just down the road. Mention EuroSlam '15 and get a discounted group rate! <a href="http://www.hiexpress.com/redirect?path=hd&brandCode=ex&localeCode=en&regionCode=1&hotelCode=RFDLP&_PMID=99801505&GPC=EUR" style="text-decoration: underline">Visit their website to reserve a room today.</a>
+			</div>
 			<br><hr><br>
 
 		</main>
@@ -189,6 +198,8 @@
 
 			<p>Share with us: #EUROSLAMSHOW on <span class="facebook"><a href="https://www.facebook.com/pages/vapordubscom/75148374150">Facebook</a></span> <span class="twitter"><a href="https://twitter.com/search?f=realtime&q=%23euroslamshow&src=typd">Twitter</a></span> <span class="instagram"><a href="http://www.gramfeed.com/instagram/tags#euroslamshow">Instagram</a></span></p>
 
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5899.700930467205!2d-88.95381477051934!3d42.32438807933523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8808bfe04094e3eb%3A0x287e2ff544c4e8f6!2sRockford+Aviators!5e0!3m2!1sen!2sus!4v1423351495033" width="1200" height="400" frameborder="0" style="border:0"></iframe>
+
 		</footer>
 
 		<script src="/js/jquery-2.1.3.min.js"></script>
@@ -196,7 +207,6 @@
 		<script>
       $( function() {
         var reg = getParam( 'registered' );
-        console.log( reg );
 
         if ( reg !== undefined ) {
           $( '#thankyou' ).show().delay( 8000 ).fadeOut();

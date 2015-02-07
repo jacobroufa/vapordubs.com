@@ -76,6 +76,18 @@
 				z-index: -1;
 			}
 
+      #thankyou {
+        background: rgba(0, 0, 0, 0.4);
+				color: #ffd700;
+        display: none;
+        height: 30px;
+        left: 0;
+        padding: 30px 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
 			.smalltext {
 				font-size: 90%;
 			}
@@ -125,6 +137,7 @@
 	</head>
 	<body>
 		<div class="background"></div>
+    <div id="thankyou">Thank you for registering for EuroSlam '15! We'll see you at the show!</div>
 
 		<header>
 
@@ -179,13 +192,26 @@
 		</footer>
 
 		<script src="/js/jquery-2.1.3.min.js"></script>
-		<script src="/js/jquery.cycle2.min.js"></script>
 
 		<script>
-			var color = 'rgb(' + rand() + ', ' + rand() + ', ' + rand() + ')';
-			var h1 = document.querySelector( 'h1' );
+      $( function() {
+        var reg = getParam( 'registered' );
+        console.log( reg );
 
-			h1.style.color = color;
-		</script>
+        if ( reg !== undefined ) {
+          $( '#thankyou' ).show().delay( 8000 ).fadeOut();
+        }
+      });
+
+      function getParam( name ) {
+        var regex, results;
+
+        name = name.replace( /[\[]/, '\\[' ).replace( /[\]]/, '\\]' );
+        regex = new RegExp( '[\\?&]' + name + '=([^&#]*)' );
+        results = regex.exec( location.search );
+
+        return results === null ? undefined : decodeURIComponent( results[1].replace( /\+/g, ' ' ));
+      }
+    </script>
 	</body>
 </html>
